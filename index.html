@@ -32,6 +32,9 @@
         <div id="result"></div>
     </main>
     <script>
+
+        const url = 'https://gwcteq-partner.domo.com/page/1992615046';
+
         const scanner = new Html5QrcodeScanner('reader', {
             qrbox: {
                 width: 250,
@@ -46,6 +49,7 @@
 <p>${result}</p>
 `;
             scanner.clear();
+            window.open(`${url}?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]`, '_blank')
             // document.getElementById('reader').remove();
         }
         function error(err) {
