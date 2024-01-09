@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="domo_btn">
+        click
+    </button>
+
+
+    <script>
+        const url = 'https://gwcteq-partner.domo.com/page/1992615046';
+
+        document.getElementById('domo_btn').addEventListener('click', () => {
+            
+
+            window.location = `${url}?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]`
+
+
+        })
+
+
+        // https://yourdomoinstance.domo.com/page/1111111111?pfilters=[{"column":"COLUMN_NAME","dataSourceId":
+        //     "DATASET_ID", "dataType": "string", "operand": "IN", "values": ["FILTER_VALUE"]}]
+    </script>
+
+</body>
+</html>
