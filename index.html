@@ -122,6 +122,42 @@
             cursor: pointer !important;
         }
 
+        .result_btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1rem;
+        }
+
+        .redirect_domo{
+            background-color: rgb(50, 128, 192) !important;
+            width: fit-content !important;
+            padding: .8rem 1rem !important;
+            border-radius: 5px !important;
+            color: #fff !important;
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            border: none !important;
+            cursor: pointer !important;
+            display: block;
+            margin: 1rem auto;
+            text-decoration: none;
+        }
+
+        .redirect_scan{
+            background-color: rgb(205, 205, 205) !important;
+            width: fit-content !important;
+            padding: .8rem 1rem !important;
+            border-radius: 5px !important;
+            color: #000 !important;
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            border: none !important;
+            cursor: pointer !important;
+        }
+        
+
     </style>
     <main>
         <div id="reader"></div>
@@ -151,9 +187,9 @@
             document.getElementById('view_result').classList.add('active');
             document.getElementById('view_result').innerHTML = `
            
-                <div>
-                    <button onclick="redirectdashboard(${result})">view result</button>
-                    <button onclick="restartScan()">Scan</button>
+                <div class='result_btns'>
+                    <button class='redirect_domo' onclick="redirectdashboard(${result})">view result</button>
+                    <button class='redirect_scan' onclick="restartScan()">Scan</button>
                 </div>
             `;
 
