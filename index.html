@@ -66,13 +66,12 @@
         scanner.render(success, error);
         function success(result) {
 
-            console.log(result);
             // document.getElementById('result').innerHTML = `<h2>Success!</h2><p>${result}</p>`;
             
             document.getElementById('view_result').classList.add('active');
             document.getElementById('view_result').innerHTML = `
            
-                <button onclick="redirectdashboard(${result})">view result</button>
+                <button onclick="redirectdashboard('${result}')">view result</button>
             `;
 
             scanner.clear();
@@ -84,7 +83,7 @@
         }
 
         function redirectdashboard(code){
-             window.open(`https://gwcteq-partner.domo.com/page/1027299519?pfilters=[{"column": "bar_code", "dataSourceId": "2759b669-338f-4e46-b7c9-f65e9bdf3bf7", "operand": "IN", "values": [${code}] }]`, '_blank')
+             window.open(`https://gwcteq-partner.domo.com/page/1027299519?pfilters=[{"column": "bar_code", "dataSourceId": "2759b669-338f-4e46-b7c9-f65e9bdf3bf7", "operand": "IN", "values": ['${code}'] }]`, '_blank')
         }
 
 
