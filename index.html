@@ -123,6 +123,7 @@
         }
 
         .result_btns {
+            width: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -131,30 +132,30 @@
         }
 
         .redirect_domo{
-            background-color: rgb(50, 128, 192) !important;
-            width: fit-content !important;
-            padding: .8rem 1rem !important;
-            border-radius: 5px !important;
-            color: #fff !important;
-            font-size: 15px !important;
-            font-weight: 500 !important;
-            border: none !important;
-            cursor: pointer !important;
+            background-color: rgb(50, 128, 192) ;
+            width: 100%;
+            padding: .8rem 1rem ;
+            border-radius: 5px ;
+            color: #fff ;
+            font-size: 15px ;
+            font-weight: 500 ;
+            border: none ;
+            cursor: pointer ;
             display: block;
             margin: 1rem auto;
             text-decoration: none;
         }
 
         .redirect_scan{
-            background-color: rgb(205, 205, 205) !important;
-            width: fit-content !important;
-            padding: .8rem 1rem !important;
-            border-radius: 5px !important;
-            color: #000 !important;
-            font-size: 16px !important;
-            font-weight: 500 !important;
-            border: none !important;
-            cursor: pointer !important;
+            background-color: rgb(205, 205, 205) ;
+            width: 100%;
+            padding: .8rem 1rem ;
+            border-radius: 5px ;
+            color: #000 ;
+            font-size: 16px ;
+            font-weight: 500 ;
+            border: none ;
+            cursor: pointer ;
         }
         
 
@@ -188,7 +189,7 @@
             document.getElementById('view_result').innerHTML = `
            
                 <div class='result_btns'>
-                    <button class='redirect_domo' onclick="redirectdashboard(${result})">view result</button>
+                    <button class='redirect_domo' onclick="redirectdashboard(${result})">View Result</button>
                     <button class='redirect_scan' onclick="restartScan()">Scan</button>
                 </div>
             `;
