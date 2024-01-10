@@ -71,19 +71,19 @@
             document.getElementById('view_result').classList.add('active');
             document.getElementById('view_result').innerHTML = `
            
-                <button onclick="redirectdashboard(${2014})">view result</button>
+                <button onclick="redirectdashboard(${result})">view result</button>
             `;
 
             scanner.clear();
             // document.getElementById('reader').remove();
         }
-        
+
         function error(err) {
             console.error(err);
         }
 
         function redirectdashboard(code){
-             window.open(`https://gwcteq-partner.domo.com/page/1992615046?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [${code}] }]`, '_blank')
+             window.open(`https://gwcteq-partner.domo.com/page/1027299519?pfilters=[{"column": "bar_code", "dataSourceId": "2759b669-338f-4e46-b7c9-f65e9bdf3bf7", "operand": "IN", "values": [${code}] }]`, '_blank')
         }
 
 
