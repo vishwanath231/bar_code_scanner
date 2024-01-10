@@ -26,15 +26,24 @@
             text-align: center;
             font-size: 1.5rem;
         }
+        #view_result{
+            display: none;
+        }
+        #view_result.active{
+            display: block;
+        }
+
     </style>
     <main>
         <div id="reader"></div>
         <div id="result"></div>
+        <div id="view_result">
+        </div>
     </main>
     <script>
 
 
-
+    document.getElementById('view_result').classList.remove('active');
         const scanner = new Html5QrcodeScanner('reader', {
             qrbox: {
                 width: 250,
@@ -44,17 +53,23 @@
         });
         scanner.render(success, error);
         function success(result) {
-            document.getElementById('result').innerHTML = `
-<h2>Success!</h2>
-<p>${result}</p>
-`;
-window.open(`https://gwcteq-partner.domo.com/page/1992615046?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]`, '_blank')
+            // document.getElementById('result').innerHTML = `<h2>Success!</h2><p>${result}</p>`;
+            
+            document.getElementById('view_result').classList.add('active');
+            document.getElementById('view_result').innerHTML = `
+                <a href="https://gwcteq-partner.domo.com/page/1992615046?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]" target="_blank">View Result</a>
+            `;
             scanner.clear();
+
+            // window.open(``, '_blank')
             // document.getElementById('reader').remove();
         }
         function error(err) {
             console.error(err);
         }
+
+
+
     </script>
 
 </body>
