@@ -34,7 +34,7 @@
             display: block;
         }
 
-        a{
+        /* a{
             background-color: rgb(190, 238, 190);
             width: fit-content;
             padding: .8rem 1rem;
@@ -42,7 +42,7 @@
             color: #000;
             font-size: 16px;
             font-weight: 500;
-        }
+        } */
     </style>
     <main>
         <div id="reader"></div>
@@ -67,7 +67,7 @@
             
             document.getElementById('view_result').classList.add('active');
             document.getElementById('view_result').innerHTML = `
-                <a href="https://gwcteq-partner.domo.com/page/1992615046?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]" target="_blank">View Result</a>
+                <a href="https://gwcteq-partner.domo.com/page/1992615046?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]" target="_blank">https://gwcteq-partner.domo.com/page/1992615046?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]</a>
             `;
             window.open(`https://gwcteq-partner.domo.com/page/1992615046?pfilters=[{"column": "Year", "dataSourceId": "f1d04ecb-90fa-4cf0-b85c-f19ab8d29b29", "dataType": "string", "operand": "IN", "values": [2014] }]`, '_blank')
             scanner.clear();
